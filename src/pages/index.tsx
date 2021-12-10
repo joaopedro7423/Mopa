@@ -1,14 +1,16 @@
-import { Heading, Text, Box } from "@chakra-ui/react";
 import { MainLayout } from "layout/MainLayout";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 const Home: NextPage = () => {
   return (
-   <MainLayout>
-     Teste de loko me
-   </MainLayout>
+    <MainLayout>
+      <NextSeo
+        title="MOPA TEAM | OS VERDADEIROS ESTÃO AQUI!"
+        description="Nunca conhecemos a derrota."
+      ></NextSeo>
+      Um teste de Escrita
+    </MainLayout>
   );
 };
 
