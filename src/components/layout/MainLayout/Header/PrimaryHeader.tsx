@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -10,17 +11,17 @@ import {
   Icon,
   IconButton,
   useBreakpointValue,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { RiMenuLine } from "react-icons/ri";
 
 import { DropdownMenu } from "components/shared/DropdownMenu";
 
 import { Logo } from "./Logo";
-import { useHeaderDrawer } from "context/HeaderDrawerContext";
 import { primaryHeaderNavigation } from "navigation/primaryHeader";
 
 export function PrimaryHeader() {
-  const { isOpen, onOpen, onClose } = useHeaderDrawer();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -46,19 +47,22 @@ export function PrimaryHeader() {
       {!isWideVersion ? (
         <Flex align="center" justify="space-between" h="100%">
           <Logo />
-          <IconButton
-            aria-label="Open navigation"
-            color="white"
-            icon={<Icon as={RiMenuLine} />}
-            fontSize="24"
-            variant="unstyled"
-            onClick={onOpen}
-            mr="2"
-          />
+          {
+            <IconButton
+              onClick={isOpen ? onClose : onOpen}
+              aria-label="Open navigation"
+              color="white"
+              icon={<Icon as={RiMenuLine} />}
+              fontSize="24"
+              variant="unstyled"
+              mr="2"
+            />
+          }
+
           <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
             <DrawerOverlay>
               <DrawerContent bg="mopa.secondary" p="4">
-                <DrawerCloseButton mt="6" color="blue" />
+                <DrawerCloseButton mt="6" color="white" />
                 <DrawerHeader>
                   <Logo />
                 </DrawerHeader>
@@ -68,7 +72,6 @@ export function PrimaryHeader() {
                     uppercase
                     direction="column"
                   />
-                  
                 </DrawerBody>
               </DrawerContent>
             </DrawerOverlay>
