@@ -1,11 +1,12 @@
-import { Box, Center, Image, Text } from "@chakra-ui/react";
+import { Box, Center, color, Image, Text } from "@chakra-ui/react";
 
 type ImageProps = {
   img: string;
   text: string;
+  color?: string ;
 };
 
-export function ImagePerfil({ img, text }: ImageProps) {
+export function ImagePerfil({ img, text, color = 'white' }: ImageProps) {
   return (
     <>
       <Center flexDir="column">
@@ -16,7 +17,7 @@ export function ImagePerfil({ img, text }: ImageProps) {
           src={img}
           alt="Users"
         />
-        <Text color="white" pt={5} textAlign="center" justifyContent="center">
+        <Text color={color} pt={5} textAlign="center" justifyContent="center">
           {text}
         </Text>
       </Center>
