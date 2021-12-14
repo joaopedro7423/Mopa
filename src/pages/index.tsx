@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       ></NextSeo>
       <MainLayout>
 
-        <SpecialMembers />
+        <SpecialMembers id="MembrosEspeciais"/>
 
       </MainLayout>
     </>
