@@ -16,7 +16,7 @@ export function ImagePerfil({ img, text }: ImageProps) {
           src={img}
           alt="Users"
         />
-        <Text pt={5} textAlign="center" justifyContent="center">
+        <Text color="white" pt={5} textAlign="center" justifyContent="center">
           {text}
         </Text>
       </Center>
