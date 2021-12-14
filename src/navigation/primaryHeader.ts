@@ -108,7 +108,7 @@ export const primaryHeaderNavigation: DropdownOptions[] = [
     ],
   },
   { name: "Institucional", url: "/institucional" },
-  { name: "Internacionalização", url: "/internacionalizacao" },
+  { name: "Membros Especiais", url: "#MembrosEspeciais" },
   {
     name: "Sociedade",
     items: [
