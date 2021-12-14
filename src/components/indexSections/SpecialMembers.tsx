@@ -1,4 +1,4 @@
-import { Box, Center, HStack } from "@chakra-ui/react";
+import { Box, Center, HStack, Stack } from "@chakra-ui/react";
 import { ImagePerfil } from "components/shared/ImagePerfil";
 import { Paralax } from "components/shared/Paralax";
 
@@ -8,27 +8,32 @@ interface SpecialMembersProps {
 
 export function SpecialMembers({ id }: SpecialMembersProps) {
   return (
-    <Box id={id}>
-      <Paralax image="/images/logo_header.jpg" p={5}>
-        <Center>
-          <HStack spacing={8} display={{ base: "block", md: "flex" }}>
-            <ImagePerfil
-              img="/images/logo_header.jpg"
-              text="Um texto muito divertido eeeeeee"
-            />
+    <Box id={id} p={5} backgroundColor="black">
+      <Center>
+        <Stack
+          spacing="60px"
+          display={{ base: "block", md: "flex" }}
+          direction={{ base: "column", md: "row" }}
+        >
+          <ImagePerfil
+            img="/images/logo_header.jpg"
+            text="Um texto muito divertido eeeeeee"
+            color="white"
+          />
 
-            <ImagePerfil
-              img="/images/logo_header.jpg"
-              text="Um texto muito divertido eeeeeee"
-            />
+          <ImagePerfil
+            img="/images/logo_header.jpg"
+            text="Um texto muito divertido eeeeeee"
+            color="pink"
+          />
 
-            <ImagePerfil
-              img="/images/logo_header.jpg"
-              text="Um texto muito divertido eeeeeee"
-            />
-          </HStack>
-        </Center>
-      </Paralax>
+          <ImagePerfil
+            img="/images/logo_header.jpg"
+            text="Um texto muito divertido eeeeeee"
+            color="red"
+          />
+        </Stack>
+      </Center>
     </Box>
   );
 }
