@@ -5,6 +5,7 @@ import { MainLayout } from "layout/MainLayout";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { InitialParalax } from "components/indexSections/InitialParalax";
+import { WhoWeAre } from "components/indexSections/WhoWeAre";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
       ></NextSeo>
       <MainLayout>
         <InitialParalax id="inicio" />
+
+        <WhoWeAre id="QuemNosSomos"  />
 
         <SpecialMembers id="MembrosEspeciais" />
       </MainLayout>
