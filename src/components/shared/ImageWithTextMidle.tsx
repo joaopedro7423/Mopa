@@ -25,7 +25,7 @@ export function ImageWithTextMidle({
       h="100%"
       py="5rem"
     >
-      <Center margin="auto" p={2} textAlign="center" maxW="30rem">
+      <Center margin="auto" p={2} textAlign="left" maxW="30rem">
         {isLink ? (
           <Link
             fontWeight="bold"
