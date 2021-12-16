@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import { InitialParalax } from "components/indexSections/InitialParalax";
 import { WhoWeAre } from "components/indexSections/WhoWeAre";
 import { GamePlayed } from "components/indexSections/GamePlayed";
+import { Discord } from "components/indexSections/Discord";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,8 @@ const Home: NextPage = () => {
         <WhoWeAre id="QuemNosSomos"  />
 
         <GamePlayed id="JogosJogados" />
+
+        <Discord id="NossoDiscord"  />
         
         <SpecialMembers id="MembrosEspeciais" />
       </MainLayout>
