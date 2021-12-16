@@ -6,7 +6,7 @@ interface ImageWithTextMidle {
   isLink?: boolean;
   text: string;
   url: string;
-  imagePath: string;
+  imagePath?: string;
 }
 
 export function ImageWithTextMidle({
