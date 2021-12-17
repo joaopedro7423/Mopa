@@ -2,6 +2,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel, {
   arrowsPlugin,
+  autoplayPlugin,
   slidesToShowPlugin,
 } from "@brainhubeu/react-carousel";
 import { Box, Icon, Image, Spinner } from "@chakra-ui/react";
@@ -41,6 +42,12 @@ export function CarouselChakra() {
               resolve: slidesToShowPlugin,
               options: {
                 numberOfSlides: 2,
+              },
+            },
+            {
+              resolve: autoplayPlugin,
+              options: {
+                interval: 3000,
               },
             },
             {
