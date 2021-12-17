@@ -8,6 +8,7 @@ import { InitialParalax } from "components/indexSections/InitialParalax";
 import { WhoWeAre } from "components/indexSections/WhoWeAre";
 import { GamePlayed } from "components/indexSections/GamePlayed";
 import { Discord } from "components/indexSections/Discord";
+import { Products } from "components/indexSections/Products";
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,8 @@ const Home: NextPage = () => {
         <GamePlayed id="JogosJogados" />
 
         <Discord id="NossoDiscord"  />
+
+        <Products id="Produtos" />
         
         <SpecialMembers id="MembrosEspeciais" />
       </MainLayout>
