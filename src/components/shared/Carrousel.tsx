@@ -18,18 +18,6 @@ export function CarouselChakra() {
     setLoad(false);
   }, []);
 
-  const images = [
-    {
-      original: "images/cod.jpg",
-    },
-    {
-      original: "images/lol.jpg",
-    },
-    {
-      original: "images/csgo.jpg",
-      description: "teste de imagem aqui",
-    },
-  ];
   if (!isLoad) {
     return (
       <>
@@ -98,7 +86,6 @@ export function CarouselChakra() {
             </Link>
           ))}
         </Carousel>
-        {/* <ImageGallery items={images}></ImageGallery> */}
       </>
     );
   } else {
