@@ -43,22 +43,42 @@ export function CarouselChakra() {
               options: {
                 arrowLeft: (
                   <button>
-                    <ArrowLeftIcon w={8} h={8} color="white" />
+                    <ArrowLeftIcon
+                      _hover={{ color: "red" }}
+                      w={8}
+                      h={8}
+                      color="white"
+                    />
                   </button>
                 ),
                 arrowLeftDisabled: (
                   <button>
-                    <ArrowLeftIcon w={8} h={8} color="white" />
+                    <ArrowLeftIcon
+                      _hover={{ color: "red" }}
+                      w={8}
+                      h={8}
+                      color="white"
+                    />
                   </button>
                 ),
                 arrowRight: (
                   <button>
-                    <ArrowRightIcon w={8} h={8} color="white" />
+                    <ArrowRightIcon
+                      _hover={{ color: "red" }}
+                      w={8}
+                      h={8}
+                      color="white"
+                    />
                   </button>
                 ),
                 arrowRightDisabled: (
                   <button>
-                    <ArrowRightIcon w={8} h={8} color="white" />
+                    <ArrowRightIcon
+                      _hover={{ color: "red" }}
+                      w={8}
+                      h={8}
+                      color="white"
+                    />
                   </button>
                 ),
                 addArrowClickHandler: true,
