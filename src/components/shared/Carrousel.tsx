@@ -86,8 +86,9 @@ export function CarouselChakra() {
             },
           ]}
         >
-          {productList.map((item) => (
+          {productList.map((item, key) => (
             <Link
+              key={key}
               justifyContent="center"
               h="100%"
               href={item.urlStripe}
