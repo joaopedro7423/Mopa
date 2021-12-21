@@ -1,4 +1,6 @@
-import { Box, Center, color, Image, Text } from "@chakra-ui/react";
+import React, { useRef } from "react";
+import { Box, Center, Image, ScaleFade, Text } from "@chakra-ui/react";
+import { useInViewport } from "react-in-viewport";
 
 type ImageProps = {
   img: string;
@@ -7,14 +9,34 @@ type ImageProps = {
 };
 
 export function ImagePerfil({ img, text, color = "white" }: ImageProps) {
+  const ref = useRef(null);
+  const { enterCount } = useInViewport(
+    ref,
+    { rootMargin: "-300px" },
+    { disconnectOnLeave: false },
+    {}
+  );
+
   return (
-    <>
-      <Center flexDir="column">
-        <Image boxSize="200px" borderRadius="full" src={img} alt="Images" objectFit="cover" />
-        <Text color={color} pt={5} textAlign="center" justifyContent="center">
-          {text}
-        </Text>
-      </Center>
-    </>
+    <Box ref={ref}>
+      <ScaleFade
+        initialScale={0.9}
+        in={enterCount > 0}
+        whileHover={{ scale: 1.1 }}
+      >
+        <Center flexDir="column">
+          <Image
+            boxSize="200px"
+            borderRadius="full"
+            src={img}
+            alt="Images"
+            objectFit="cover"
+          />
+          <Text color={color} pt={5} textAlign="center" justifyContent="center">
+            {text}
+          </Text>
+        </Center>
+      </ScaleFade>
+    </Box>
   );
 }
