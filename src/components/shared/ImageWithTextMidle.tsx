@@ -1,4 +1,13 @@
-import { Center, Divider, Flex, Image, Text } from "@chakra-ui/react";
+import {
+  Center,
+  Divider,
+  Flex,
+  Image,
+  SlideFade,
+  Text,
+} from "@chakra-ui/react";
+import { useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 import { Link } from "./Link";
 
 interface ImageWithTextMidle {
@@ -17,8 +26,17 @@ export function ImageWithTextMidle({
   imagePath,
 }: ImageWithTextMidle) {
   const flexDir = alignLeft ? "row" : ("row-reverse" as "row" | "row-reverse");
+  const ref = useRef(null);
+  const { enterCount } = useInViewport(
+    ref,
+    { rootMargin: "-300px" },
+    { disconnectOnLeave: false },
+    {}
+  );
+
   return (
     <Flex
+      ref={ref}
       justifyContent="space-between"
       maxW={{ base: "100%", md: "70%" }}
       flexDir={{ base: "column", md: flexDir }}
@@ -57,7 +75,9 @@ export function ImageWithTextMidle({
       </Center>
 
       <Center>
-        <Image maxH="30rem" src={imagePath} />
+        <SlideFade in={enterCount > 0} offsetY="20px">
+          <Image maxH="30rem" src={imagePath} />
+        </SlideFade>
       </Center>
     </Flex>
   );
