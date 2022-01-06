@@ -38,7 +38,7 @@ export function ImageWithTextMidle({
     <Flex
       ref={ref}
       justifyContent="space-between"
-      maxW={{ base: "100%", md: "70%" }}
+      maxW={{ base: "100%", md: "90%" }}
       flexDir={{ base: "column", md: flexDir }}
       h="100%"
       py="5rem"
