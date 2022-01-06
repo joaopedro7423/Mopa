@@ -11,7 +11,7 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
       <ImageWithTextMidle
         alignLeft
         text="Silvio Santos Ipsum Mah você mora com o papai ou com a mamãem? Valendo um milhão de reaisammm. Estamos em ritmo de festamm. Ma você está certo dissoam? Ma! Ao adquirir o carnê do Baú, você estará concorrendo a um prêmio de cem mil reaisam. O prêmio é em barras de ouro, que vale mais que dinheiroam. É fácil ou não éam?"
-        imagePath="/images/logo_header.jpg"
+        imagePath="/images/caveiraMopa.png"
         url="https://www.youtube.com/watch?v=pfBMfgLYum4"
       />
     </Center>
