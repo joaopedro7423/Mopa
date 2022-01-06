@@ -18,7 +18,7 @@ export function ImagePerfil({ img, text, color = "white" }: ImageProps) {
   );
 
   return (
-    <Box ref={ref}>
+    <Box ref={ref} m={2} mt={5}>
       <ScaleFade
         initialScale={0.9}
         in={enterCount > 0}
