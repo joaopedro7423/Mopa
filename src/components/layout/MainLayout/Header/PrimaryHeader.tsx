@@ -8,8 +8,10 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
+  Heading,
   Icon,
   IconButton,
+  Text,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -41,12 +43,12 @@ export function PrimaryHeader() {
       h="52px"
       w="100%"
       px={{ base: "4", xl: "0" }}
-      background="mopa.secondary"
       zIndex={1000}
     >
       {!isWideVersion ? (
         <Flex align="center" justify="space-between" h="100%">
-          <Logo />
+          {/* <Logo /> */}
+
           {
             <IconButton
               onClick={isOpen ? onClose : onOpen}
@@ -61,10 +63,13 @@ export function PrimaryHeader() {
 
           <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
             <DrawerOverlay>
-              <DrawerContent bg="mopa.secondary" p="4">
+              <DrawerContent bg="mopa." p="4">
                 <DrawerCloseButton mt="6" color="white" />
                 <DrawerHeader>
-                  <Logo />
+                  {/* <Logo /> */}
+                  <Heading pl={3} fontWeight="extrabold" color="WHITE">
+                    MOPA TEAM
+                  </Heading>
                 </DrawerHeader>
                 <DrawerBody>
                   <DropdownMenu
