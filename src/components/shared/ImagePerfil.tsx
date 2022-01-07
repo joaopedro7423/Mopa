@@ -33,7 +33,7 @@ export function ImagePerfil({ img, text, color = "white" }: ImageProps) {
             objectFit="cover"
           />
           <Text
-            fontSize="md"
+            fontSize="xx-large"
             fontWeight="extrabold"
             color={color}
             pt={5}
