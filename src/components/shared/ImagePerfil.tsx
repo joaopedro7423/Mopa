@@ -31,6 +31,7 @@ export function ImagePerfil({ img, text, color = "white" }: ImageProps) {
             src={img}
             alt="Images"
             objectFit="cover"
+            border={`5px solid black`}
           />
           <Text
             fontSize="xx-large"
