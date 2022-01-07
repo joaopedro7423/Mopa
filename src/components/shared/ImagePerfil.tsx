@@ -32,7 +32,14 @@ export function ImagePerfil({ img, text, color = "white" }: ImageProps) {
             alt="Images"
             objectFit="cover"
           />
-          <Text color={color} pt={5} textAlign="center" justifyContent="center">
+          <Text
+            fontSize="md"
+            fontWeight="extrabold"
+            color={color}
+            pt={5}
+            textAlign="center"
+            justifyContent="center"
+          >
             {text}
           </Text>
         </Center>
