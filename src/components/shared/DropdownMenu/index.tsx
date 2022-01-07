@@ -30,25 +30,20 @@ export function DropdownMenu({
             key={index}
           />
         ) : (
-          <HStack
-            key={index}
-            minH="30px"
-            px={{ base: "2", md: "2" }}
-            alignItems="center"
-            cursor="pointer"
-            _hover={{ bg: "mopa.tertiary" }}
-          >
+          <HStack key={index} minH="30px" px={{ base: "2", md: "2" }}>
             <Link
               href={String(option.url)}
               textTransform={uppercase ? "uppercase" : "none"}
               fontFamily="Montserrat"
-              fontSize="x-small"
-              fontWeight="bold"
+              fontSize="md"
+              fontWeight="extrabold"
               color="white"
               h="100%"
               w="100%"
               d="flex"
               alignItems="center"
+              cursor="pointer"
+              _hover={{ color: "red" }}
             >
               {option.name}
             </Link>
