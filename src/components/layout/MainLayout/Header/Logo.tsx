@@ -5,7 +5,7 @@ export function Logo() {
   return (
     <Link href="/">
       <Image
-        src="/images/logo_header.jpg"
+        src="/images/CaveiraMopa.png"
         alt="mopa"
         width="120px"
         height="41px"
