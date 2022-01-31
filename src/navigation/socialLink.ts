@@ -1,5 +1,7 @@
 import { SocialList } from "types/SocialList";
 
+export const discordLink = "https://discord.gg/uMzXaqmZZP";
+
 export const socialList: SocialList[] = [
   {
     title: "Spotify",
