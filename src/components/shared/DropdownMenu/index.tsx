@@ -43,6 +43,7 @@ export function DropdownMenu({
               d="flex"
               alignItems="center"
               cursor="pointer"
+              textShadow={`0px 0px 2px black`}
               _hover={{ color: "red" }}
             >
               {option.name}

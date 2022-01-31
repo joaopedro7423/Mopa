@@ -40,6 +40,7 @@ export function ImagePerfil({ img, text, color = "white" }: ImageProps) {
             pt={5}
             textAlign="center"
             justifyContent="center"
+            textShadow={`0px 0px 2px white`}
           >
             {text}
           </Text>
