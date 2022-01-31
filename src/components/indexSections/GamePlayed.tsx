@@ -15,13 +15,33 @@ export function GamePlayed({ id }: GamePlayedProps) {
         margin="auto"
         display={{ base: "block", md: "flex" }}
       >
-        <ImagePerfil img="/images/csgo.jpg" text="Cs Go" color="black" />
+        <ImagePerfil
+          link="null"
+          img="/images/csgo.jpg"
+          text="Cs Go"
+          color="black"
+        />
 
-        <ImagePerfil img="/images/lol.jpg" text="LOL" color="black" />
+        <ImagePerfil
+          link="null"
+          img="/images/lol.jpg"
+          text="LOL"
+          color="black"
+        />
 
-        <ImagePerfil img="/images/cod.jpg" text="Cod Warzone" color="black" />
+        <ImagePerfil
+          link="null"
+          img="/images/cod.jpg"
+          text="Cod Warzone"
+          color="black"
+        />
 
-        <ImagePerfil img="/images/apex.jpg" text="APEX" color="black" />
+        <ImagePerfil
+          link="null"
+          img="/images/apex.jpg"
+          text="APEX"
+          color="black"
+        />
       </Flex>
     </Paralax>
   );

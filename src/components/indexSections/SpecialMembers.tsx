@@ -15,18 +15,21 @@ export function SpecialMembers({ id }: SpecialMembersProps) {
         display={{ base: "block", md: "flex" }}
       >
         <ImagePerfil
+          link="null"
           img="/images/logo_header.jpg"
           text="Um texto muito divertido eeeeeee"
           color="white"
         />
 
         <ImagePerfil
+          link="null"
           img="/images/logo_header.jpg"
           text="Um texto muito divertido eeeeeee"
           color="pink"
         />
 
         <ImagePerfil
+          link="null"
           img="/images/logo_header.jpg"
           text="Um texto muito divertido eeeeeee"
           color="red"
