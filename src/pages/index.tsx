@@ -1,5 +1,3 @@
-import { Box, Center, Container, Flex, HStack, Text } from "@chakra-ui/react";
-import { ImagePerfil } from "components/shared/ImagePerfil";
 import { SpecialMembers } from "components/indexSections/SpecialMembers";
 import { MainLayout } from "layout/MainLayout";
 import type { NextPage } from "next";
@@ -9,6 +7,7 @@ import { WhoWeAre } from "components/indexSections/WhoWeAre";
 import { GamePlayed } from "components/indexSections/GamePlayed";
 import { Discord } from "components/indexSections/Discord";
 import { Products } from "components/indexSections/Products";
+import { SocialMedia } from "components/indexSections/SocialMedia";
 
 const Home: NextPage = () => {
   return (
@@ -20,14 +19,16 @@ const Home: NextPage = () => {
       <MainLayout>
         <InitialParalax id="inicio" />
 
-        <WhoWeAre id="QuemNosSomos"  />
+        <WhoWeAre id="QuemNosSomos" />
 
         <GamePlayed id="JogosJogados" />
 
-        <Discord id="NossoDiscord"  />
+        <Discord id="NossoDiscord" />
+
+        <SocialMedia id="SocialMedia" />
 
         <Products id="Produtos" />
-        
+
         <SpecialMembers id="MembrosEspeciais" />
       </MainLayout>
     </>
