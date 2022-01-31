@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { ImagePerfil } from "components/shared/ImagePerfil";
-import { instagranLink, sopotfyLink, youtubeLink } from "navigation/socialLink";
+import { socialList } from "navigation/socialLink";
 
 interface SocialMediaProps {
   id?: string;
@@ -15,29 +15,16 @@ export function SocialMedia({ id }: SocialMediaProps) {
         margin="auto"
         display={{ base: "block", md: "flex" }}
       >
-        <ImagePerfil
-          isLink
-          link={instagranLink}
-          img="/images/insta.png"
-          text="Instagram"
-          color="white"
-        />
-
-        <ImagePerfil
-          isLink
-          link={sopotfyLink}
-          img="/images/spotfy.png"
-          text="Spotify"
-          color="white"
-        />
-
-        <ImagePerfil
-          isLink
-          link={youtubeLink}
-          img="/images/ym.png"
-          text="Youtube"
-          color="white"
-        />
+        {socialList.map((social, index) => (
+          <ImagePerfil
+            key={index}
+            isLink
+            link={social.url}
+            img={social.image}
+            text={social.title}
+            color="white"
+          />
+        ))}
       </Flex>
     </Box>
   );
