@@ -6,6 +6,7 @@ import { Link } from "./Link";
 type ImageProps = {
   img: string;
   text: string;
+  description?: string;
   color?: string;
   link: string;
   isLink?: boolean;
@@ -16,6 +17,7 @@ export function ImagePerfil({
   link,
   img,
   text,
+  description,
   color = "white",
 }: ImageProps) {
   const ref = useRef(null);
@@ -83,6 +85,17 @@ export function ImagePerfil({
               textShadow={`0px 0px 2px white`}
             >
               {text}
+            </Text>
+            <Text
+              fontSize="xs"
+              fontWeight="extrabold"
+              color={color}
+              pt={2}
+              textAlign="center"
+              justifyContent="center"
+              textShadow={`0px 0px 2px white`}
+            >
+              {description}
             </Text>
           </Center>
         </ScaleFade>
