@@ -46,6 +46,7 @@ export function ImageWithTextMidle({
       <Center margin="auto" p={2} textAlign="left" maxW="30rem">
         {isLink ? (
           <Link
+            isExternal
             fontWeight="bold"
             fontSize="20px"
             externalLink
