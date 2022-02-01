@@ -7,8 +7,8 @@ interface ProductsProps {
 
 export function Products({ id }: ProductsProps) {
   return (
-    <Box id={id} minh="50vh" bgColor="black" p={5}>
-      <Box w="80%" margin="auto" p={4}>
+    <Box pt={12} id={id} minh="50vh" bgColor="black" p={5}>
+      <Box w="80%" margin="auto" p={12}>
         <CarouselChakra />
       </Box>
     </Box>

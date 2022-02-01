@@ -8,7 +8,7 @@ interface SocialMediaProps {
 
 export function SocialMedia({ id }: SocialMediaProps) {
   return (
-    <Box id={id} p={5} backgroundColor="black">
+    <Box id={id} p={12} backgroundColor="black">
       <Flex
         justifyContent="space-between"
         maxW="70%"

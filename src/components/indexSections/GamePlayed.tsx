@@ -11,10 +11,10 @@ export function GamePlayed({ id }: GamePlayedProps) {
     <Paralax
       image="/images/fundo_branco.png"
       id={id}
-      p={5}
+      p={12}
       backgroundColor="black"
     >
-      <Wrap justify="center" maxW="80%" margin="auto">
+      <Wrap justify="center" mt={5} maxW="80%" margin="auto">
         <WrapItem>
           <ImagePerfil
             link="null"
