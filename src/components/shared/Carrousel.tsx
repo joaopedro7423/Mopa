@@ -1,13 +1,9 @@
-import "react-image-gallery/styles/css/image-gallery.css";
-import "@brainhubeu/react-carousel/lib/style.css";
-import Carousel, {
-  arrowsPlugin,
-  autoplayPlugin,
-  slidesToShowPlugin,
-} from "@brainhubeu/react-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import { Box, Icon, Image, Spinner } from "@chakra-ui/react";
 import { productList } from "navigation/productsList";
-import { Link } from "../shared/Link";
+import { Link } from "./Link";
 import { useEffect, useState } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
@@ -19,72 +15,38 @@ export function CarouselChakra() {
   }, []);
 
   if (!isLoad) {
+    const responsive = {
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 2,
+        slidesToSlide: 1, // optional, default to 1.
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+        slidesToSlide: 2, // optional, default to 1.
+      },
+      mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+        slidesToSlide: 1, // optional, default to 1.
+      },
+    };
     return (
       <>
         <Carousel
-          plugins={[
-            "centered",
-            "infinite",
-            "fastSwipe",
-            {
-              resolve: slidesToShowPlugin,
-              options: {
-                numberOfSlides: 2,
-              },
-            },
-            {
-              resolve: autoplayPlugin,
-              options: {
-                interval: 3000,
-              },
-            },
-            {
-              resolve: arrowsPlugin,
-              options: {
-                arrowLeft: (
-                  <button>
-                    <ArrowLeftIcon
-                      _hover={{ color: "red" }}
-                      w={8}
-                      h={8}
-                      color="white"
-                    />
-                  </button>
-                ),
-                arrowLeftDisabled: (
-                  <button>
-                    <ArrowLeftIcon
-                      _hover={{ color: "red" }}
-                      w={8}
-                      h={8}
-                      color="white"
-                    />
-                  </button>
-                ),
-                arrowRight: (
-                  <button>
-                    <ArrowRightIcon
-                      _hover={{ color: "red" }}
-                      w={8}
-                      h={8}
-                      color="white"
-                    />
-                  </button>
-                ),
-                arrowRightDisabled: (
-                  <button>
-                    <ArrowRightIcon
-                      _hover={{ color: "red" }}
-                      w={8}
-                      h={8}
-                      color="white"
-                    />
-                  </button>
-                ),
-                addArrowClickHandler: true,
-              },
-            },
-          ]}
+          focusOnSelect={true}
+          centerMode={true}
+          autoPlay={true}
+          draggable={false}
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlaySpeed={4000}
+          keyBoardControl={true}
+          transitionDuration={500}
+          containerClass="carousel-container"
+          itemClass="carousel-item-padding-40-px"
         >
           {productList.map((item, key) => (
             <Link
