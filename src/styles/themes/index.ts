@@ -34,6 +34,9 @@ export const theme = extendTheme({
       "a:hover": {
         textDecoration: "none !important",
       },
+      html: {
+        "scroll-behavior": "smooth",
+      },
     },
   },
 });
