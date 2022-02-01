@@ -9,7 +9,7 @@ export function Products({ id }: ProductsProps) {
   return (
     <Box id={id} minh="50vh" bgColor="black" p={5}>
       <Box w="80%" margin="auto" p={4}>
-      <CarouselChakra />
+        <CarouselChakra />
       </Box>
     </Box>
   );
