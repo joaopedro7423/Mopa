@@ -5,6 +5,7 @@ import {
   Image,
   SlideFade,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
@@ -27,6 +28,12 @@ export function ImageWithTextMidle({
 }: ImageWithTextMidle) {
   const flexDir = alignLeft ? "row" : ("row-reverse" as "row" | "row-reverse");
   const ref = useRef(null);
+
+  const isWideVersion = useBreakpointValue({
+    base: true,
+    md: false,
+  });
+
   const { enterCount } = useInViewport(
     ref,
     { rootMargin: "-300px" },
@@ -76,7 +83,7 @@ export function ImageWithTextMidle({
       </Center>
 
       <Center>
-        <SlideFade in={enterCount > 0} offsetY="20px">
+        <SlideFade in={enterCount > 0 || isWideVersion} offsetY="20px">
           <Image maxH="30rem" src={imagePath} />
         </SlideFade>
       </Center>

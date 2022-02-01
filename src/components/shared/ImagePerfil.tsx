@@ -1,11 +1,18 @@
 import React, { useRef } from "react";
-import { Box, Center, Image, ScaleFade, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Image,
+  ScaleFade,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useInViewport } from "react-in-viewport";
 import { Link } from "./Link";
 
 type ImageProps = {
   img: string;
-  text: string;
+  text?: string;
   description?: string;
   color?: string;
   link: string;
@@ -21,6 +28,12 @@ export function ImagePerfil({
   color = "white",
 }: ImageProps) {
   const ref = useRef(null);
+
+  const isWideVersion = useBreakpointValue({
+    base: true,
+    md: false,
+  });
+
   const { enterCount } = useInViewport(
     ref,
     { rootMargin: "-300px" },
@@ -33,7 +46,7 @@ export function ImagePerfil({
       {isLink ? (
         <ScaleFade
           initialScale={0.9}
-          in={enterCount > 0}
+          in={enterCount > 0 || isWideVersion}
           whileHover={{ scale: 1.1 }}
         >
           <Center flexDir="column">
@@ -63,7 +76,7 @@ export function ImagePerfil({
       ) : (
         <ScaleFade
           initialScale={0.9}
-          in={enterCount > 0}
+          in={enterCount > 0 || isWideVersion}
           whileHover={{ scale: 1.1 }}
         >
           <Center flexDir="column">
