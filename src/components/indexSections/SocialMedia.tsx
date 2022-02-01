@@ -21,7 +21,6 @@ export function SocialMedia({ id }: SocialMediaProps) {
             isLink
             link={social.url}
             img={social.image}
-            text={social.title}
             color="white"
           />
         ))}
