@@ -1,0 +1,11 @@
+@font-face {
+   font-family: "Astoria";
+   src: url("/fonts/astoria-extra-bold.ttf") format("truetype");
+   font-style: normal;
+ }
+
+ @font-face {
+   font-family: "Grungie";
+   src: url("/fonts/BAD GRUNGE.ttf") format("truetype");
+   font-weight: 600;
+ }
