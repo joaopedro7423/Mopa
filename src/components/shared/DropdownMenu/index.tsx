@@ -31,7 +31,7 @@ export function DropdownMenu({
             key={index}
           />
         ) : (
-          <HStack key={index} minH="30px" px={{ base: "2", md: "2" }}>
+          <HStack key={index} mt={10} minH="30px" px={{ base: "2", md: "2" }}>
             <Box>
               <Link
                 href={String(option.url)}
