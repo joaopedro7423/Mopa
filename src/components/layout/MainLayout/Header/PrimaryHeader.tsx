@@ -11,6 +11,7 @@ import {
   Heading,
   Icon,
   IconButton,
+  Image,
   Text,
   useBreakpointValue,
   useDisclosure,
@@ -36,8 +37,6 @@ export function PrimaryHeader() {
 
   return (
     <Box
-      backgroundColor="rgba(0, 0, 0, 0.5)"
-      boxShadow={`0px 0px 10px rgba(0, 0, 0, 0.1)`}
       position="sticky"
       left="0"
       top="0"
@@ -92,6 +91,14 @@ export function PrimaryHeader() {
           height="100%"
           marginX="auto"
         >
+          <Image
+            mt={16}
+            ml={3}
+            transform="scale(-1,1)"
+            src="/images/caveiras/mopaCaveira.png"
+            position={"initial"}
+            maxH="200%"
+          />
           <DropdownMenu options={primaryHeaderNavigation} uppercase />
           {showSocialMediaIcons}
         </Flex>
