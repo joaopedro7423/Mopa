@@ -1,4 +1,4 @@
-import { Flex, HStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, Image } from "@chakra-ui/react";
 import { DropdownOptions } from "types/dropdown";
 import { Link } from "../Link";
 import DropdownMenuItem from "./DropdownMenuItem";
@@ -21,6 +21,7 @@ export function DropdownMenu({
       px="2"
       direction={direction}
       width={direction === "column" ? "100%" : ""}
+      justifyContent={"space-between"}
     >
       {options.map((option, index) =>
         option.items ? (
@@ -31,23 +32,26 @@ export function DropdownMenu({
           />
         ) : (
           <HStack key={index} minH="30px" px={{ base: "2", md: "2" }}>
-            <Link
-              href={String(option.url)}
-              textTransform={uppercase ? "uppercase" : "none"}
-              fontFamily="Montserrat"
-              fontSize="md"
-              fontWeight="extrabold"
-              color="white"
-              h="100%"
-              w="100%"
-              d="flex"
-              alignItems="center"
-              cursor="pointer"
-              textShadow={`0px 0px 2px black`}
-              _hover={{ color: "red" }}
-            >
-              {option.name}
-            </Link>
+            <Box>
+              <Link
+                href={String(option.url)}
+                textTransform={uppercase ? "uppercase" : "none"}
+                fontSize="md"
+                fontWeight="extrabold"
+                color="white"
+                h="100%"
+                w="100%"
+                d="flex"
+                alignItems="center"
+                cursor="pointer"
+                textShadow={`0px 0px 2px black`}
+                _hover={{ color: "red" }}
+              >
+                <Heading fontFamily="Grungie" textAlign={"center"}>
+                  {option.name}
+                </Heading>
+              </Link>
+            </Box>
           </HStack>
         )
       )}
