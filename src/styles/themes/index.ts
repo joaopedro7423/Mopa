@@ -29,6 +29,9 @@ export const theme = extendTheme({
     body: "Open Sans, Montserrat",
     mono: "Open Sans, Montserrat",
   },
+  shadows: {
+    red: "rgba(255, 0, 0, 0.4) 0px 0px 0px 1px, rgba(255, 0, 0, 0.5) 0px 5px 10px, rgba(255, 0, 0, 0.8) 0px 0px 40px",
+  },
   styles: {
     global: {
       "a:hover": {
