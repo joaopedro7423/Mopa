@@ -30,7 +30,7 @@ export const theme = extendTheme({
     mono: "Open Sans, Montserrat",
   },
   shadows: {
-    red: "rgba(255, 0, 0, 0.4) 0px 0px 0px 1px, rgba(255, 0, 0, 0.5) 0px 5px 10px, rgba(255, 0, 0, 0.8) 0px 0px 40px",
+    red: "rgba(255, 0, 0, 0.4) 0px 0px 0px 2px, rgba(255, 0, 0, 0.5) 0px 5px 10px, rgba(255, 0, 0, 0.8) 0px 0px 40px",
   },
   styles: {
     global: {
