@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../styles/themes";
 import "styles/themes/fonts.css";
+import "styles/themes/polygonBox.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

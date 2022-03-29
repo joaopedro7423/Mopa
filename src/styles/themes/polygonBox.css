@@ -1,0 +1,38 @@
+@property --border{
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 0;
+  }
+
+  .box {
+    --path:0% 0%, 100% 0, 100% 68%, 83% 100%, 0% 100%;
+    --border:3px;
+    display:inline-grid;
+    place-content:center;
+    position:relative;
+    clip-path:polygon(var(--path));
+    z-index:0;
+  }
+
+  .box:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    -webkit-mask:paint(polygon-border);
+    background:red;
+  }
+
+
+/*   
+  .box {
+    --path:0% 0%, 100% 0, 100% 68%, 83% 100%, 0% 100%;
+    --border:5px;
+    -webkit-mask: paint(polygon-border);
+    mask: paint(polygon-border);
+    min-width:200px;
+    min-height:200px;
+    max-width: 100%;
+    max-height: 100%;
+    background:rgb(255, 0, 0);
+  } */
