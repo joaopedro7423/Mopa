@@ -14,6 +14,7 @@ export function Paralax({ image, children, ...rest }: ParalaxProps) {
       backgroundAttachment="fixed"
       backgroundPosition="center"
       backgroundSize="cover"
+      backgroundRepeat="no-repeat"
     >
       {children}
     </Box>
