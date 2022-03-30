@@ -6,6 +6,7 @@ import {
   Heading,
   Image,
   Text,
+  chakra,
 } from "@chakra-ui/react";
 import { ImageWithTextMidle } from "components/shared/ImageWithTextMidle";
 import NeonCard from "components/shared/NeonCard";
@@ -25,14 +26,14 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
       boxShadow="dark-lg"
     >
       <Box shadow="dark-lg">
-        <NeonCard>
+        <NeonCard alignItems="center">
           <Flex
-            justifyItems="center"
+            justify="center"
             mx={20}
             w="70%"
             alignContent={"space-between"}
             p={10}
-            display={{ sm: "block", md: "flex" }}
+            display={{ sm: "block", lg: "flex" }}
           >
             <Image
               justifyContent="center"
@@ -50,29 +51,22 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
             </Box>
             <Box>
               <Heading fontSize={"55px"} fontFamily="grungie" color={"white"}>
-                MOPA TEAM
+                <chakra.span color={"red !important"}>MOPA</chakra.span> TEAM
               </Heading>
               <Heading fontSize={"20px"} fontFamily="astoria" color={"white"}>
                 Somos mais que um time, somos um grupo de pessoas unigas,
                 detrminadas a serem
               </Heading>
-              <Heading fontSize={"55px"} fontFamily="grungie" color={"white"}>
+              <Heading fontSize={"55px"} fontFamily="grungie" color={"red"}>
                 OS INIMIGOS DO FIM.
               </Heading>
-              <Heading fontSize={"25px"} fontFamily="grungie" color={"white"}>
-                OS VERDADEIROS EU CONHECO!
+              <Heading fontSize={"35px"} fontFamily="grungie" color={"white"}>
+                OS DE VERDADE SE ENCONTA AQUI !
               </Heading>
             </Box>
           </Flex>
         </NeonCard>
       </Box>
-      {/*       
-      <ImageWithTextMidle
-        alignLeft
-        text="Somos mais que um time. Somos MOPA TEAM."
-        imagePath="/images/caveiraMopa.png"
-        url="https://www.youtube.com/watch?v=pfBMfgLYum4"
-      /> */}
     </Paralax>
   );
 }
