@@ -1,4 +1,12 @@
-import { Center, Divider, Flex, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { ImageWithTextMidle } from "components/shared/ImageWithTextMidle";
 import NeonCard from "components/shared/NeonCard";
 import { Paralax } from "components/shared/Paralax";
@@ -14,8 +22,50 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
       bgSize="contain"
       id={id}
       image="/images/background/carbon.jpg"
+      boxShadow="dark-lg"
     >
-      <NeonCard></NeonCard>
+      <Box shadow="dark-lg">
+        <NeonCard>
+          <Flex
+            justifyItems="center"
+            mx={20}
+            w="70%"
+            alignContent={"space-between"}
+            p={10}
+            display={{ sm: "block", md: "flex" }}
+          >
+            <Image
+              justifyContent="center"
+              minH="50px"
+              maxH="250px"
+              src="images/caveiras/mopaCaveira2.png"
+            />
+            <Box mx={10}>
+              <Divider
+                border="1px"
+                borderColor="red"
+                h="97%"
+                orientation="vertical"
+              />
+            </Box>
+            <Box>
+              <Heading fontSize={"55px"} fontFamily="grungie" color={"white"}>
+                MOPA TEAM
+              </Heading>
+              <Heading fontSize={"20px"} fontFamily="astoria" color={"white"}>
+                Somos mais que um time, somos um grupo de pessoas unigas,
+                detrminadas a serem
+              </Heading>
+              <Heading fontSize={"55px"} fontFamily="grungie" color={"white"}>
+                OS INIMIGOS DO FIM.
+              </Heading>
+              <Heading fontSize={"25px"} fontFamily="grungie" color={"white"}>
+                OS VERDADEIROS EU CONHECO!
+              </Heading>
+            </Box>
+          </Flex>
+        </NeonCard>
+      </Box>
       {/*       
       <ImageWithTextMidle
         alignLeft
