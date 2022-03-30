@@ -20,7 +20,7 @@ export default function NeonCard({ children, ...rest }: NeonBoxProps) {
   return (
     <Center>
       <Box
-        maxW="70%"
+        maxW="60%"
         maxH="10%"
         style={{
           filter:

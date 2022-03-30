@@ -25,46 +25,48 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
       image="/images/background/carbon.jpg"
       boxShadow="dark-lg"
     >
-      <Box shadow="dark-lg">
+      <Box>
         <NeonCard alignItems="center">
-          <Flex
-            justify="center"
-            mx={20}
-            w="70%"
-            alignContent={"space-between"}
-            p={10}
-            display={{ sm: "block", lg: "flex" }}
-          >
-            <Image
-              justifyContent="center"
-              minH="50px"
-              maxH="250px"
-              src="images/caveiras/mopaCaveira2.png"
-            />
-            <Box mx={10}>
-              <Divider
-                border="1px"
-                borderColor="red"
-                h="97%"
-                orientation="vertical"
+          <Center>
+            <Flex
+              justify="center"
+              mx={20}
+              w="90%"
+              alignContent={"space-between"}
+              p={10}
+              display={{ sm: "block", lg: "flex" }}
+            >
+              <Image
+                m="auto"
+                minH="50px"
+                maxH="350px"
+                src="images/caveiras/mopaCaveira2.png"
               />
-            </Box>
-            <Box>
-              <Heading fontSize={"55px"} fontFamily="grungie" color={"white"}>
-                <chakra.span color={"red !important"}>MOPA</chakra.span> TEAM
-              </Heading>
-              <Heading fontSize={"20px"} fontFamily="astoria" color={"white"}>
-                Somos mais que um time, somos um grupo de pessoas unigas,
-                detrminadas a serem
-              </Heading>
-              <Heading fontSize={"55px"} fontFamily="grungie" color={"red"}>
-                OS INIMIGOS DO FIM.
-              </Heading>
-              <Heading fontSize={"35px"} fontFamily="grungie" color={"white"}>
-                OS DE VERDADE SE ENCONTA AQUI !
-              </Heading>
-            </Box>
-          </Flex>
+              <Box my={{ base: 10, lg: "none" }} mx={{ lg: 10 }}>
+                <Divider
+                  border="1px"
+                  borderColor="red"
+                  h="100%"
+                  orientation="vertical"
+                />
+              </Box>
+              <Box m="auto" textAlign={{ base: "center", lg: "initial" }}>
+                <Heading fontSize={"55px"} fontFamily="grungie" color={"white"}>
+                  <chakra.span color={"red !important"}>MOPA</chakra.span> TEAM
+                </Heading>
+                <Heading fontSize={"20px"} fontFamily="astoria" color={"white"}>
+                  Somos mais que um time, somos um grupo de pessoas unigas,
+                  detrminadas a serem
+                </Heading>
+                <Heading fontSize={"55px"} fontFamily="grungie" color={"red"}>
+                  OS INIMIGOS DO FIM.
+                </Heading>
+                <Heading fontSize={"35px"} fontFamily="grungie" color={"white"}>
+                  OS DE VERDADE SE ENCONTA AQUI !
+                </Heading>
+              </Box>
+            </Flex>
+          </Center>
         </NeonCard>
       </Box>
     </Paralax>
