@@ -15,7 +15,7 @@ export function InitialParalax({ id }: InitialParalaxProps) {
       shadow="dark-lg"
     >
       <Center>
-        <Image maxW="100vh" src="/images/caveiras/mopaVetor.png" />
+        <Image h="100vh" maxW="100%" src="/images/caveiras/mopaVetor.png" />
       </Center>
     </Paralax>
   );
