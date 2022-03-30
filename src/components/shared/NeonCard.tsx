@@ -20,8 +20,7 @@ export default function NeonCard({ children, ...rest }: NeonBoxProps) {
   return (
     <Center>
       <Box
-        maxW="60%"
-        maxH="10%"
+        {...rest}
         style={{
           filter:
             "drop-shadow(rgba(255, 0, 0, 0.4) 0px 0px 0px 2px, rgba(255, 0, 0, 0.5) 0px 5px 10px, rgba(255, 0, 0, 0.8) 0px 0px 40px)",
