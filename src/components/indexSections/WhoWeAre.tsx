@@ -26,7 +26,7 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
       boxShadow="dark-lg"
     >
       <Box>
-        <NeonCard alignItems="center">
+        <NeonCard maxW="60%" alignItems="center">
           <Center>
             <Flex
               justify="center"
