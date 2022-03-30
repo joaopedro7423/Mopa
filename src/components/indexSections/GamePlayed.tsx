@@ -1,5 +1,14 @@
-import { Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  Center,
+  Divider,
+  Flex,
+  Image,
+  Text,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import { ImagePerfil } from "components/shared/ImagePerfil";
+import NeonCard from "components/shared/NeonCard";
 import { Paralax } from "components/shared/Paralax";
 
 interface GamePlayedProps {
@@ -9,12 +18,64 @@ interface GamePlayedProps {
 export function GamePlayed({ id }: GamePlayedProps) {
   return (
     <Paralax
-      image="/images/fundo_branco.png"
+      image="/images/background/carbon.jpg"
       id={id}
       p={12}
       backgroundColor="black"
     >
-      <Wrap justify="center" mt={5} maxW="80%" margin="auto">
+      <Text
+        justify="center"
+        textAlign={"center"}
+        fontSize="60px"
+        fontFamily="grungie"
+        color="white"
+      >
+        {" "}
+        ESTAMOS SEMPRE ONLINE
+      </Text>
+
+      <Wrap justify="center" maxW="80%" margin="auto" spacing={5}>
+        <WrapItem>
+          <Image src="/images/jogos/apex.png" maxH={"100px"} />
+        </WrapItem>
+
+        <WrapItem>
+          <Image src="/images/jogos/warzone.png" maxH={"100px"} />
+        </WrapItem>
+
+        <WrapItem>
+          <Image src="/images/jogos/league.png" maxH={"100px"} />
+        </WrapItem>
+        <WrapItem>
+          <Image src="/images/jogos/csgo.png" maxH={"100px"} />
+        </WrapItem>
+
+        <WrapItem>
+          <Flex w="100%">
+            <Center>
+              <Divider
+                justifySelf={"center"}
+                justifyContent={"center"}
+                border="1px"
+                borderColor="red"
+                w="20%"
+              />
+
+              <NeonCard>
+                <Image
+                  px={10}
+                  m="auto"
+                  minH="50px"
+                  maxH="115px"
+                  src="/images/discord2.png"
+                />
+              </NeonCard>
+            </Center>
+          </Flex>
+        </WrapItem>
+      </Wrap>
+
+      {/* <Wrap max justify="center" maxW="80%" margin="auto">
         <WrapItem>
           <ImagePerfil
             link="null"
@@ -51,7 +112,7 @@ export function GamePlayed({ id }: GamePlayedProps) {
             color="black"
           />
         </WrapItem>
-      </Wrap>
+      </Wrap> */}
     </Paralax>
   );
 }
