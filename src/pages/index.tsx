@@ -23,11 +23,11 @@ const Home: NextPage = () => {
 
         <GamePlayed id="JogosJogados" />
 
+        <Products id="Produtos" />
+
         <Discord id="NossoDiscord" />
 
         <SocialMedia id="SocialMedia" />
-
-        <Products id="Produtos" />
 
         <SpecialMembers id="MembrosEspeciais" />
       </MainLayout>
