@@ -7,7 +7,6 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { ImagePerfil } from "components/shared/ImagePerfil";
 import NeonCard from "components/shared/NeonCard";
 import { Paralax } from "components/shared/Paralax";
 
@@ -29,6 +28,7 @@ export function GamePlayed({ id }: GamePlayedProps) {
         fontSize="60px"
         fontFamily="grungie"
         color="white"
+        mb={7}
       >
         {" "}
         ESTAMOS SEMPRE ONLINE
@@ -74,45 +74,6 @@ export function GamePlayed({ id }: GamePlayedProps) {
           </Flex>
         </WrapItem>
       </Wrap>
-
-      {/* <Wrap max justify="center" maxW="80%" margin="auto">
-        <WrapItem>
-          <ImagePerfil
-            link="null"
-            img="/images/csgo.jpg"
-            text="CS GO"
-            color="black"
-          />
-        </WrapItem>
-
-        <WrapItem>
-          <ImagePerfil
-            link="null"
-            img="/images/lol.jpg"
-            text="LOL"
-            color="black"
-          />
-        </WrapItem>
-
-        <WrapItem>
-          {" "}
-          <ImagePerfil
-            link="null"
-            img="/images/cod.jpg"
-            text="COD WARZONE"
-            color="black"
-          />
-        </WrapItem>
-        <WrapItem>
-          {" "}
-          <ImagePerfil
-            link="null"
-            img="/images/apex.jpg"
-            text="APEX"
-            color="black"
-          />
-        </WrapItem>
-      </Wrap> */}
     </Paralax>
   );
 }
