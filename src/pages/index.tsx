@@ -25,9 +25,9 @@ const Home: NextPage = () => {
 
         <Products id="Produtos" />
 
-        <Discord id="NossoDiscord" />
-
         <SocialMedia id="SocialMedia" />
+
+        {/* <Discord id="NossoDiscord" /> */}
 
         <SpecialMembers id="MembrosEspeciais" />
       </MainLayout>
