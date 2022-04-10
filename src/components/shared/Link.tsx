@@ -6,7 +6,7 @@ import {
 import { ReactNode } from "react";
 
 interface LinkProps extends ChakraLinkProps {
-  href: string | undefined;
+  href: string;
   externalLink?: boolean;
   children?: ReactNode | ReactNode[] | String;
 }
