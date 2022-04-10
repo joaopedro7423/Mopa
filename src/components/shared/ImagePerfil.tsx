@@ -15,7 +15,7 @@ type ImageProps = {
   text?: string;
   description?: string;
   color?: string;
-  link: string;
+  link?: string | undefined;
   isLink?: boolean;
 };
 
@@ -52,16 +52,15 @@ export function ImagePerfil({
           <Center flexDir="column">
             <Link href={link} isExternal>
               <Image
-                boxSize="200px"
+                boxSize="100px"
                 borderRadius="full"
                 src={img}
                 alt="Images"
                 objectFit="cover"
-                border={`5px solid black`}
+                border={`2px solid black`}
               />
               <Text
-                fontSize="xx-large"
-                fontWeight="extrabold"
+                fontFamily={"astoria"}
                 color={color}
                 pt={5}
                 textAlign="center"
@@ -81,7 +80,7 @@ export function ImagePerfil({
         >
           <Center flexDir="column">
             <Image
-              boxSize="200px"
+              boxSize="100px"
               borderRadius="full"
               src={img}
               alt="Images"
