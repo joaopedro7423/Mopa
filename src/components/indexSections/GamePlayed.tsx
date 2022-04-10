@@ -7,6 +7,7 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
+import { Link } from "components/shared/Link";
 import NeonCard from "components/shared/NeonCard";
 import { Paralax } from "components/shared/Paralax";
 
@@ -62,13 +63,15 @@ export function GamePlayed({ id }: GamePlayedProps) {
               />
 
               <NeonCard>
-                <Image
-                  px={10}
-                  m="auto"
-                  minH="50px"
-                  maxH="115px"
-                  src="/images/discord2.png"
-                />
+                <Link isExternal href="https://discord.gg/uMzXaqmZZP">
+                  <Image
+                    px={10}
+                    m="auto"
+                    minH="50px"
+                    maxH="115px"
+                    src="/images/discord2.png"
+                  />
+                </Link>
               </NeonCard>
             </Center>
           </Flex>
