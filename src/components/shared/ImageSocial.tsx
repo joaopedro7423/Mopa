@@ -19,7 +19,7 @@ type ImageProps = {
 };
 
 export function ImageSocial({ link, img }: ImageProps) {
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
 
   const isWideVersion = useBreakpointValue({
     base: true,

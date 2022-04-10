@@ -24,7 +24,7 @@ export function GamePlayed({ id }: GamePlayedProps) {
       backgroundColor="black"
     >
       <Text
-        justify="center"
+        justifyContent="center"
         textAlign={"center"}
         fontSize="60px"
         fontFamily="grungie"

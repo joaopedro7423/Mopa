@@ -1,5 +1,4 @@
 import { Box, Text, chakra, VStack, Stack, Container } from "@chakra-ui/react";
-import { CarouselChakra } from "components/shared/Carrousel";
 import { Link } from "components/shared/Link";
 
 interface ProductsProps {

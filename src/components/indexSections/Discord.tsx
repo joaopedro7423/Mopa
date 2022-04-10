@@ -12,7 +12,7 @@ export function Discord({ id }: DiscordProps) {
     md: "/images/discord2.png" as string,
   });
   return (
-    <Center id={id} minh="50vh" bgColor="black">
+    <Center id={id} minH="50vh" bgColor="black">
       <ImageWithTextMidle
         isLink
         text="Entre em nosso Discord"

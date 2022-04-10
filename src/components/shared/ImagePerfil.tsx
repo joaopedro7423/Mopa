@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { ElementType, useRef } from "react";
 import {
   Box,
   Center,
@@ -27,7 +27,7 @@ export function ImagePerfil({
   description,
   color = "white",
 }: ImageProps) {
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
 
   const isWideVersion = useBreakpointValue({
     base: true,

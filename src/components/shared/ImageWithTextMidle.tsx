@@ -27,7 +27,7 @@ export function ImageWithTextMidle({
   imagePath,
 }: ImageWithTextMidle) {
   const flexDir = alignLeft ? "row" : ("row-reverse" as "row" | "row-reverse");
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
 
   const isWideVersion = useBreakpointValue({
     base: true,
