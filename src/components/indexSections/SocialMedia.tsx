@@ -25,9 +25,9 @@ export function SocialMedia({ id }: SocialMediaProps) {
           justifyContent="space-between"
           maxW="70%"
           margin="auto"
-          display={{ base: "block", md: "flex" }}
+          display={{ md: "block", lg: "flex" }}
         >
-          <Box d="flex" mr={15}>
+          <Box m="auto" d={{ sm: "block", md: "flex" }} mr={15}>
             {socialList.map((social, index) => (
               <ImageSocial
                 key={index}
