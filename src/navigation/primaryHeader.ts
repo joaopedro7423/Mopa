@@ -5,7 +5,6 @@ export const primaryHeaderNavigation: DropdownOptions[] = [
   { name: "Quem Somos", url: "#QuemNosSomos" },
   { name: "Jogos", url: "#JogosJogados" },
   { name: "Produtos", url: "#Produtos" },
-  { name: "Nosso Discord", url: "#NossoDiscord" },
   { name: "Social", url: "#SocialMedia" },
   { name: "Membros Especiais", url: "#MembrosEspeciais" },
 ];
