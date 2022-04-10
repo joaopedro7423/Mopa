@@ -15,7 +15,7 @@ type ImageProps = {
   text?: string;
   description?: string;
   color?: string;
-  link?: string | undefined;
+  link: string;
   isLink?: boolean;
 };
 

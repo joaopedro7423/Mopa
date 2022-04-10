@@ -48,7 +48,6 @@ export function ImageSocial({ link, img }: ImageProps) {
               src={img}
               alt="Images"
               objectFit="cover"
-              icon
             />
           </Link>
         </Center>
