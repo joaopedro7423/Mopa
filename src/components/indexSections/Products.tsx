@@ -10,13 +10,8 @@ export function Products({ id }: ProductsProps) {
     <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" isExternal>
       <Box id={id} py={20} bgImage={"/images/background/branco.jpg"}>
         <Container maxW="1120px">
-          <Box
-            h="100%"
-            maxW={{ bg: "720px", lg: "1430px" }}
-            w={"80%"}
-            m={"auto"}
-          >
-            <Box ml={10} justifyContent={"initial"} maxW={"360px"}>
+          <Box h="100%" maxW={{ bg: "720px", lg: "1430px" }} m={"auto"}>
+            <Box justifyContent={"initial"} maxW={"360px"}>
               <Text
                 color={"black"}
                 fontFamily={"grungie"}

@@ -20,7 +20,7 @@ export function SocialMedia({ id }: SocialMediaProps) {
     <Paralax
       image="/images/background/carbon.jpg"
       id={id}
-      p={10}
+      p={20}
       // backgroundColor="black"
     >
       <Container maxW={"1120px"}>
@@ -51,7 +51,7 @@ export function SocialMedia({ id }: SocialMediaProps) {
           </Box>
 
           <Center>
-            <Box fontSize={"2rem"}>
+            <Box fontSize={"1.9rem"}>
               <Text fontFamily="astoria" color={"white"}>
                 {" "}
                 LEVE O
