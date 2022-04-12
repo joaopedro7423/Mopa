@@ -1,4 +1,12 @@
-import { Box, Divider, Flex, Text, chakra, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  Text,
+  chakra,
+  Center,
+  Container,
+} from "@chakra-ui/react";
 import { ImageSocial } from "components/shared/ImageSocial";
 import { Paralax } from "components/shared/Paralax";
 import { socialList } from "navigation/socialLink";
@@ -12,18 +20,13 @@ export function SocialMedia({ id }: SocialMediaProps) {
     <Paralax
       image="/images/background/carbon.jpg"
       id={id}
-
+      p={10}
       // backgroundColor="black"
     >
-      <Box
-        bgGradient={
-          "linear(to-t, rgba(0,0,0,0.29) 0%, rgba(255,255,255,0.15) 100%)"
-        }
-        p={20}
-      >
+      <Container maxW={"1120px"}>
         <Flex
           justifyContent="space-between"
-          maxW="70%"
+          maxW="100%"
           margin="auto"
           display={{ md: "block", lg: "flex" }}
         >
@@ -68,7 +71,7 @@ export function SocialMedia({ id }: SocialMediaProps) {
             </Box>
           </Center>
         </Flex>
-      </Box>
+      </Container>
     </Paralax>
   );
 }

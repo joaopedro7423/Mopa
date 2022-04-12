@@ -7,6 +7,7 @@ import {
   Image,
   Text,
   chakra,
+  Container,
 } from "@chakra-ui/react";
 import { ImageWithTextMidle } from "components/shared/ImageWithTextMidle";
 import NeonCard from "components/shared/NeonCard";
@@ -25,15 +26,15 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
       image="/images/background/carbon.jpg"
       boxShadow="dark-lg"
     >
-      <Box>
-        <NeonCard maxW="60%" alignItems="center">
+      <Container maxW={"1120px"}>
+        <NeonCard w="100%" alignItems="center">
           <Center>
             <Flex
               justify="center"
               mx={20}
               w="90%"
               alignContent={"space-between"}
-              p={10}
+              p={{ base: 0, sm: 10 }}
               display={{ sm: "block", lg: "flex" }}
             >
               <Image
@@ -68,7 +69,7 @@ export function WhoWeAre({ id }: WhoWeAreProps) {
             </Flex>
           </Center>
         </NeonCard>
-      </Box>
+      </Container>
     </Paralax>
   );
 }

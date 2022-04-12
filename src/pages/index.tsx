@@ -7,6 +7,7 @@ import { WhoWeAre } from "components/indexSections/WhoWeAre";
 import { GamePlayed } from "components/indexSections/GamePlayed";
 import { Products } from "components/indexSections/Products";
 import { SocialMedia } from "components/indexSections/SocialMedia";
+import { Container } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
